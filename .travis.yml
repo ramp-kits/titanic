@@ -21,6 +21,6 @@ script:
     - flake8 *.py submissions/*/*.py
     - jupyter nbconvert --execute titanic_starting_kit.ipynb --ExecutePreprocessor.kernel_name=$IPYTHON_KERNEL
     - ramp_test_submission
-    - ramp_test_submission --submission-name=random_forest_20_5
+    - ramp_test_submission --submission=random_forest_20_5
 notifications:
   email: true
