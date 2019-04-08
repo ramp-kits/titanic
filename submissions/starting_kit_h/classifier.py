@@ -17,7 +17,8 @@ class Classifier(BaseEstimator):
         self.clf = Pipeline([
             ('imputer',
              SimpleImputer(strategy=str(imputer_strategy))),
-            ('classifier', LogisticRegression(C=float(logreg_C)))
+            ('classifier', LogisticRegression(
+                C=float(logreg_C), solver='liblinear'))
         ])
 
     def fit(self, X, y):
