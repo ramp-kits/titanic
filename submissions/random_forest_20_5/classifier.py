@@ -8,7 +8,8 @@ class Classifier(BaseEstimator):
     def __init__(self):
         self.clf = Pipeline([
             ('imputer', SimpleImputer(strategy='median')),
-            ('classifier', RandomForestClassifier(n_estimators=20, max_depth=5))
+            ('classifier', RandomForestClassifier(n_estimators=20,
+                                                  max_depth=5))
         ])
 
     def fit(self, X, y):
