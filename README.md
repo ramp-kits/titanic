@@ -12,12 +12,20 @@ Install ramp-workflow (rampwf), then execute
 ramp_test_submission
 ```
 
-to test the starting kit submission (`submissions/starting_kit`) and
+to test the starting kit submission (`submissions/starting_kit`).
+
+To test a different submission use:
+
+```
+ramp_test_submission --submission=<folder>
+```
+
+where `<folder>` is the name of the folder within `submissions` that your
+submission is saved under. For example to test `submissions/random_forest_20_5`
+use:
 
 ```
 ramp_test_submission --submission=random_forest_20_5
 ```
-
-to test `random_forest_20_5` or any other submission in `submissions`.
 
 Get started on this RAMP with the [dedicated notebook](titanic_starting_kit.ipynb).
