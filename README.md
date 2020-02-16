@@ -4,28 +4,44 @@ Authors: Alexandre Gramfort & Balazs Kegl
 
 [![Build Status](https://travis-ci.org/ramp-kits/titanic.svg?branch=master)](https://travis-ci.org/ramp-kits/titanic)
 
-Go to [`ramp-worflow`](https://github.com/paris-saclay-cds/ramp-workflow) for more help on the [RAMP](http:www.ramp.studio) ecosystem.
+## Getting started
 
-Install ramp-workflow (rampwf), then execute
+### Install
 
-```
-ramp_test_submission
-```
+To run a submission and the notebook you will need the dependencies listed
+in `requirements.txt`. You can install install the dependencies with the
+following command-line:
 
-to test the starting kit submission (`submissions/starting_kit`).
-
-To test a different submission use:
-
-```
-ramp_test_submission --submission=<folder>
+```bash
+pip install -U -r requirements.txt
 ```
 
-where `<folder>` is the name of the folder within `submissions` that your
-submission is saved under. For example to test `submissions/random_forest_20_5`
-use:
+If you are using `conda`, we provide an `environment.yml` file for similar
+usage.
 
-```
-ramp_test_submission --submission=random_forest_20_5
+### Challenge description
+
+Get started on this RAMP with the
+[dedicated notebook](titanic_starting_kit.ipynb).
+
+### Test a submission
+
+The submissions need to be located in the `submissions` folder. For instance
+for `my_submission`, it should be located in `submissions/my_submission`.
+
+To run a specific submission, you can use the `ramp-test` command line:
+
+```bash
+ramp-test --submission my_submission
 ```
 
-Get started on this RAMP with the [dedicated notebook](titanic_starting_kit.ipynb).
+You can get more information regarding this command line:
+
+```bash
+ramp-test --help
+```
+
+### To go further
+
+You can find more information regarding `ramp-workflow` in the
+[dedicated documentation](https://paris-saclay-cds.github.io/ramp-docs/ramp-workflow/stable/using_kits.html)
