@@ -11,7 +11,8 @@ def get_estimator():
 
     categorical_cols = ['Sex', 'Pclass', 'Embarked']
     categorical_pipeline = make_pipeline(
-        OneHotEncoder(handle_unknown='ignore')
+        SimpleImputer(strategy='constant', fill_value='missing'),
+        OneHotEncoder(handle_unknown='ignore'),
     )
     numerical_cols = ['Age', 'SibSp', 'Parch', 'Fare']
     numerical_pipeline = make_pipeline(
